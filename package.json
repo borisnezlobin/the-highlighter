@@ -1,0 +1,92 @@
+{
+    "name": "the-comment-highlighter",
+    "version": "1.0.0",
+    "description": "A VS Code extension that makes custom comment highlighting and styling easy. Add your own prefixes and styles, or use the defaults (todo, fixme, idea, note, ignore.",
+    "main": "src/extension.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "engines": {
+        "vscode": "^1.56.0"
+    },
+    "keywords": [
+        "vscode",
+        "extension",
+        "todo",
+        "fixme",
+        "highlight",
+        "prefix",
+        "tags",
+        "comments",
+        "highlighting"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "author": "Boris Nezlobin",
+    "license": "MIT",
+    "dependencies": {
+        "vscode": "^1.1.37"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.1.37"
+    },
+    "contributes": {
+        "configuration": {
+            "title": "Comment Highlighter",
+            "properties": {
+                "theCommentHighlighter.userDefinedPrefixes": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "prefix": {
+                                "type": "string"
+                            },
+                            "color": {
+                                "type": "string",
+                                "format": "color"
+                            },
+                            "backgroundColor": {
+                                "type": "string",
+                                "format": "color"
+                            },
+                            "fontWeight": {
+                                "type": "string",
+                                "enum": [
+                                    "normal",
+                                    "bold"
+                                ]
+                            },
+                            "fontStyle": {
+                                "type": "string",
+                                "enum": [
+                                    "normal",
+                                    "italic"
+                                ]
+                            },
+                            "textDecoration": {
+                                "type": "string",
+                                "enum": [
+                                    "none",
+                                    "underline",
+                                    "line-through",
+                                    "underline line-through"
+                                ]
+                            },
+                            "fontFamily": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "prefix",
+                            "color"
+                        ]
+                    },
+                    "default": [],
+                    "description": "Custom prefixes to highlight in comments."
+                }
+            }
+        }
+    }
+}
