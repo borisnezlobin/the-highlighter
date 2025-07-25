@@ -1,7 +1,7 @@
 # THE Higlighter for Visual Studio Code
 
 #### Example
-![Example](example.png)
+![Example](https://raw.githubusercontent.com/borisnezlobin/the-highlighter/refs/heads/master/example.png)
 
 ## Overview
 Style any comment starting with any prefix you choose. Color, underline, italicize, bold, add background colors, and more.
@@ -13,13 +13,13 @@ Style any comment starting with any prefix you choose. Color, underline, italici
 - Open source
 
 ## Installation
-Install from VS Code marketplace. There should be a blue button at the top of this page that says "Install". That's the right button to click.
+Install from VS Code marketplace. There should be a button at the top of this page that says "Install". That's the right button to click.
 
 ## Usage
 1. Open settings:
-   1. Open the command palette (Ctrl+Shift+P or Cmd+Shift+P)Search for and select "Preferences: Open Settings (JSON)," or
-   2. Open settings (UI) with "Cmd+," and search for "The Comment Highlighter". Select "Edit in settings.json" under "User Defined Prefixes."
-3. Add your desired prefixes and decoration styles under the `todoHighlighter` configuration. Follow the format of the defaults. In case you deleted those:
+   1. Open the command palette (Ctrl+Shift+P or Cmd+Shift+P). Search for and select "Preferences: Open Settings (JSON)," or
+   2. Open settings (UI) with Cmd+, or Ctrl+, (command + comma) and search for "The Comment Highlighter". Select "Edit in settings.json" under "User Defined Prefixes."
+3. Add your desired prefixes and decoration styles under the `theCommentHighlighter.userDefinedPrefixes` configuration. Follow the format of the defaults. In case you deleted those:
    ```json
    "theCommentHighlighter.userDefinedPrefixes": [
       // list of prefix-and-style objects in the following format:
@@ -42,4 +42,4 @@ I will check any activity on this repository within 24 hours (even if it looks u
 I also take feature requests — just open an issue and I'll get back to you!
 
 ## License
-This project is licensed under the MIT License because open source is so cool. See the LICENSE file for more details. Kidding. There isn't a LICENSE file.
+This project is licensed under the MIT License because open source is so cool. See the LICENSE file for more details.

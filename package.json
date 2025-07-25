@@ -1,92 +1,138 @@
 {
-    "name": "the-comment-highlighter",
-    "version": "1.0.0",
-    "description": "A VS Code extension that makes custom comment highlighting and styling easy. Add your own prefixes and styles, or use the defaults (todo, fixme, idea, note, ignore.",
-    "main": "src/extension.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "engines": {
-        "vscode": "^1.56.0"
-    },
-    "keywords": [
-        "vscode",
-        "extension",
-        "todo",
-        "fixme",
-        "highlight",
-        "prefix",
-        "tags",
-        "comments",
-        "highlighting"
-    ],
-    "activationEvents": [
-        "*"
-    ],
-    "author": "Boris Nezlobin",
-    "license": "MIT",
-    "dependencies": {
-        "vscode": "^1.1.37"
-    },
-    "devDependencies": {
-        "@types/vscode": "^1.1.37"
-    },
-    "contributes": {
-        "configuration": {
-            "title": "Comment Highlighter",
+  "name": "the-comment-highlighter",
+  "displayName": "The Comment Highlighter",
+  "version": "1.1.0",
+  "publisher": "randomletters",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/borisnezlobin/the-highlighter.git"
+  },
+  "description": "Highlight and style comments beginning with certain prefixes. Add your own prefixes and styles, or use the defaults (todo, fixme, idea, note, ignore.",
+  "main": "src/extension.js",
+  "icon": "logo-512.png",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "vscode": "^1.56.0"
+  },
+  "categories": [
+    "Other",
+    "Formatters",
+    "Themes",
+    "Visualization"
+  ],
+  "keywords": [
+    "vscode",
+    "extension",
+    "todo",
+    "fixme",
+    "highlight",
+    "prefix",
+    "tags",
+    "comments",
+    "highlighting"
+  ],
+  "markdown": "standard",
+  "activationEvents": [
+    "*"
+  ],
+  "author": "Boris Nezlobin",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/vscode": "^1.1.37"
+  },
+  "contributes": {
+    "configuration": {
+      "title": "Comment Highlighter",
+      "properties": {
+        "theCommentHighlighter.userDefinedPrefixes": {
+          "type": "array",
+          "items": {
+            "type": "object",
             "properties": {
-                "theCommentHighlighter.userDefinedPrefixes": {
-                    "type": "array",
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "prefix": {
-                                "type": "string"
-                            },
-                            "color": {
-                                "type": "string",
-                                "format": "color"
-                            },
-                            "backgroundColor": {
-                                "type": "string",
-                                "format": "color"
-                            },
-                            "fontWeight": {
-                                "type": "string",
-                                "enum": [
-                                    "normal",
-                                    "bold"
-                                ]
-                            },
-                            "fontStyle": {
-                                "type": "string",
-                                "enum": [
-                                    "normal",
-                                    "italic"
-                                ]
-                            },
-                            "textDecoration": {
-                                "type": "string",
-                                "enum": [
-                                    "none",
-                                    "underline",
-                                    "line-through",
-                                    "underline line-through"
-                                ]
-                            },
-                            "fontFamily": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "prefix",
-                            "color"
-                        ]
-                    },
-                    "default": [],
-                    "description": "Custom prefixes to highlight in comments."
-                }
+              "prefix": {
+                "type": "string"
+              },
+              "color": {
+                "type": "string",
+                "format": "color"
+              },
+              "backgroundColor": {
+                "type": "string",
+                "format": "color"
+              },
+              "fontWeight": {
+                "type": "string",
+                "enum": [
+                  "normal",
+                  "bold"
+                ]
+              },
+              "fontStyle": {
+                "type": "string",
+                "enum": [
+                  "normal",
+                  "italic"
+                ]
+              },
+              "textDecoration": {
+                "type": "string",
+                "enum": [
+                  "none",
+                  "underline",
+                  "line-through",
+                  "underline line-through"
+                ]
+              },
+              "fontFamily": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "prefix",
+              "color"
+            ]
+          },
+          "default": [
+            {
+              "prefix": "todo",
+              "color": "#a1fe00",
+              "fontStyle": "italic"
+            },
+            {
+              "prefix": "fixme",
+              "color": "#ff5555",
+              "backgroundColor": "#ff55551a",
+              "fontWeight": "bold"
+            },
+            {
+              "prefix": "idea",
+              "color": "#ffb86c",
+              "fontStyle": "italic",
+              "textDecoration": "underline"
+            },
+            {
+              "prefix": "hack",
+              "backgroundColor": "#9000ff1d",
+              "color": "#cb87ff",
+              "fontStyle": "italic",
+              "textDecoration": "underline"
+            },
+            {
+              "prefix": "ignore",
+              "color": "#ffffff54",
+              "textDecoration": "line-through"
+            },
+            {
+              "prefix": "note",
+              "fontStyle": "italic",
+              "color": "#ffffffa2"
             }
+          ],
+          "description": "Custom prefixes to highlight in comments."
         }
+      }
     }
+  }
 }
