@@ -1,7 +1,9 @@
-# THE Higlighter for Visual Studio Code
+# *The* Higlighter for Visual Studio Code
 
-#### Example
-![Example](https://raw.githubusercontent.com/borisnezlobin/the-highlighter/refs/heads/master/example.png)
+In action:
+![Example Image 1](https://raw.githubusercontent.com/borisnezlobin/the-highlighter/refs/heads/master/branding1.png)
+![Example Image 2](https://raw.githubusercontent.com/borisnezlobin/the-highlighter/refs/heads/master/branding2.png)
+![Example Image 3](https://raw.githubusercontent.com/borisnezlobin/the-highlighter/refs/heads/master/branding3.png)
 
 ## Overview
 Style any comment starting with any prefix you choose. Color, underline, italicize, bold, add background colors, and more.
@@ -9,8 +11,12 @@ Style any comment starting with any prefix you choose. Color, underline, italici
 ## Features
 - Define any prefix to highlight comments for
 - Apply decorations to comments based on the prefix
+- Supports JS/Java/C/C++ single- and multi-line (`//`, `/*`), HTML (`<!--`), Python/YAML (`#`) comments
 - Everything is up to you
 - Open source
+
+#### Example
+![Example](https://raw.githubusercontent.com/borisnezlobin/the-highlighter/refs/heads/master/example.png)
 
 ## Installation
 Install from VS Code marketplace. There should be a button at the top of this page that says "Install". That's the right button to click.
