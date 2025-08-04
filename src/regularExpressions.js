@@ -7,7 +7,7 @@ function getRegexes(decorationStyles, window) {
     return prefixes.map(prefix => {
         // Match single-line comments
         // const singleLine = new RegExp(`(?:\\/\\/|#)\\s*?${prefix}\\b.*`, 'gi');
-        const regex = new RegExp(`(?:#|\\/\\/)\\s*(${prefix}.*)|\\/\\*\\s*(${prefix}[\\s\\S]*?)\\*\\/|<!--\\s*(${prefix}[\\s\\S]*?)-->`, "gi");
+        const regex = new RegExp(`^(?:#|\\/\\/)\\s*(${prefix}.*)|\\/\\*\\s*(${prefix}[\\s\\S]*?)\\*\\/|<!--\\s*(${prefix}[\\s\\S]*?)-->`, "gi");
         // Match multiline comments
         // const multiLine = new RegExp(`/\\*[\\s\\S]*?\\b${prefix}\\b[\\s\\S]*?\\*/`, 'gi');
         return [

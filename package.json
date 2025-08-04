@@ -1,13 +1,13 @@
 {
   "name": "the-comment-highlighter",
   "displayName": "The Comment Highlighter",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "publisher": "randomletters",
   "repository": {
     "type": "git",
     "url": "https://github.com/borisnezlobin/the-highlighter.git"
   },
-  "description": "Highlight and style comments beginning with certain prefixes. Add your own prefixes and styles, or use the defaults (todo, fixme, idea, note, ignore.",
+  "description": "Highlight and style comments in your code with customizable prefixes like TODO, FIXME, and more. Perfect for organizing your code and staying on top of tasks. Fully customizable and easy to use!",
   "main": "src/extension.js",
   "icon": "logo-512.png",
   "scripts": {
@@ -128,9 +128,14 @@
               "prefix": "note",
               "fontStyle": "italic",
               "color": "#ffffffa2"
+            }, {
+              "prefix": "======",
+              "color": "#ffffff",
+              "fontWeight": "bold",
+              "fontStyle": "italic"
             }
           ],
-          "description": "Custom prefixes to highlight in comments."
+          "description": "Custom prefixes to highlight in comments and style descriptions."
         }
       }
     }
